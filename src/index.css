@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  
+  --color-page-bg: #F4F7F9;
+  --color-surface: #FFFFFF;
+  --color-primary: #0984E3;
+  --color-success: #00B894;
+  --color-text-main: #2D3436;
+  --color-text-secondary: #636E72;
+  --color-text-muted: #B2BEC3;
+  --color-border: #E1E8ED;
+  --color-danger-bg: #FFF5F5;
+  --color-danger-text: #C53030;
+}
+
+@layer base {
+  body {
+    @apply bg-page-bg text-text-main antialiased font-sans;
+  }
+}
+
+.geometric-card {
+  @apply bg-surface border border-border rounded-lg shadow-none;
+}
+
+.label-caps {
+  @apply text-[11px] uppercase tracking-[1.5px] font-bold text-text-muted;
+}
+
+.progress-container {
+  @apply h-2 bg-[#DFE6E9] rounded-full overflow-hidden;
+}
+
+.progress-fill {
+  @apply h-full bg-success transition-all duration-500;
+}
+
+.checkbox-custom {
+  @apply w-4 h-4 border-2 border-primary rounded-sm transition-colors;
+}
+
+.checkbox-custom.checked {
+  @apply bg-primary;
+}
